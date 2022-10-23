@@ -1,0 +1,31 @@
+[tool.poetry]
+name = "dingwall-ai"
+version = "0.1.0"
+description = "AI innit"
+authors = ["ben <benjmcarr@gmail.com>"]
+license = "MIT"
+readme = "README.md"
+homepage = "https://github.com/benjmcarr/dingwall-ai"
+repository = "https://github.com/benjmcarr/dingwall-ai"
+keywords = ["dingwall"]
+packages = [{include = "dingwall_ai"}]
+
+[tool.poetry.dependencies]
+python = "^3.10"
+folium = "^0.13.0"
+rasterio = "^1.3.3"
+matplotlib = "^3.6.1"
+geopandas = "^0.11.1"
+typer = "^0.6.1"
+sentinelsat = "^1.1.1"
+gdal = "3.4.1"
+
+[tool.poetry.group.dev.dependencies]
+pytest = "^7.1.3"
+
+[build-system]
+requires = ["poetry-core"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.poetry.scripts]
+data = "dingwall_ai.dingwall_data.data:main"
